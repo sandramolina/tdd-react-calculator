@@ -21,4 +21,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npn run test:e2e`
 
-Lanches Cyoress test suite.# tdd-react-calculator
+Lanches Cyoress test suite.

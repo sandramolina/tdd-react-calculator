@@ -25,20 +25,20 @@ function KeyPad(props) {
           <button id='clear' className="clear" onClick={clearClick}>C</button>
         </div>
         <div className="two">
-          <button id="number7" onClick={() => numberClick('7')}>7</button>
-          <button id="number8" onClick={() => numberClick('8')}>8</button>
-          <button id="number9" onClick={() => numberClick('9')}>9</button>
-          <button id="operator-divide" onClick={() => operatorClick('/')}>/</button>
-          <button id="number4" onClick={() => numberClick('4')}>4</button>
-          <button id="number5" onClick={() => numberClick('5')}>5</button>
-          <button id="number6" onClick={() => numberClick('6')}>6</button>
+          <button data-testid="number7" id="number7" onClick={() => numberClick('7')}>7</button>
+          <button data-testid="number8" id="number8" onClick={() => numberClick('8')}>8</button>
+          <button data-testid="number9" id="number9" onClick={() => numberClick('9')}>9</button>
+          <button  id="operator-divide" onClick={() => operatorClick('/')}>/</button>
+          <button data-testid="number4" id="number4" onClick={() => numberClick('4')}>4</button>
+          <button data-testid="number5" id="number5" onClick={() => numberClick('5')}>5</button>
+          <button data-testid="number6" id="number6" onClick={() => numberClick('6')}>6</button>
           <button id="operator-multiply" onClick={() => operatorClick('*')}>x</button>
-          <button id="number1" onClick={() => numberClick('1')}>1</button>
-          <button id="number2" onClick={() => numberClick('2')}>2</button>
-          <button id="number3" onClick={() => numberClick('3')}>3</button>
+          <button data-testid="number1" id="number1" onClick={() => numberClick('1')}>1</button>
+          <button data-testid="number2" id="number2" onClick={() => numberClick('2')}>2</button>
+          <button data-testid="number3" id="number3" onClick={() => numberClick('3')}>3</button>
           <button id="operator-subtract" onClick={() => operatorClick('-')}>-</button>
           <button id="decimal" onClick={() => decimalClick()}>.</button>
-          <button id="number0" onClick={() => numberClick('0')}>0</button>
+          <button data-testid="number0" id="number0" onClick={() => numberClick('0')}>0</button>
           <button id="operator-equals" onClick={() => operatorClick('=')}>=</button>
           <button id="operator_add" onClick={() => operatorClick('+')}>+</button>
         </div>

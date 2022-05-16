@@ -102,7 +102,7 @@ function App() {
   return (
     <div className="container">
     <div className="calculator">
-      <div id="running-total" className="display">{ runningTotal }</div>
+      <div data-testid="running-total" id="running-total" className="display">{ runningTotal }</div>
       <KeyPad 
       handleNumber={numberClick} 
       handleOperator={operatorClick} 
