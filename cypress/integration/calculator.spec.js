@@ -14,12 +14,36 @@ describe('Calculator', () => {
     cy.get('.display').should('have.text', '14');
   });
 
-  it('should arithmetical operations update the display with the result of the operation', () => {
+  it('should arithmetical operations update the display with the result of the operation - add', () => {
     cy.get('#number1').click();
     cy.get('#operator_add').click();
     cy.get('#number4').click();
     cy.get('#operator_add').click();
     cy.get('.display').should('have.text', '5');
+  });
+
+  it('should arithmetical operations update the display with the result of the operation - substract', () => {
+    cy.get('#number5').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number4').click();
+    cy.get('#operator-subtract').click();
+    cy.get('.display').should('have.text', '1');
+  });
+
+  it('should arithmetical operations update the display with the result of the operation - multiply', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number4').click();
+    cy.get('#operator-multiply').click();
+    cy.get('.display').should('have.text', '8');
+  });
+
+  it('should arithmetical operations update the display with the result of the operation - divide', () => {
+    cy.get('#number8').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number4').click();
+    cy.get('#operator-divide').click();
+    cy.get('.display').should('have.text', '2');
   });
 
   it('should chain multiple operations together', () => {
@@ -39,6 +63,13 @@ describe('Calculator', () => {
     cy.get('#number9').click();
     cy.get('#operator-equals').click();
     cy.get('.display').should('contain', '-');
+  });
+
+  it('should display positive numbers', () => {
+    cy.get('#number4').click();
+    cy.get('#number4').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '44');
   });
 
   it('should display decimal positions', () => {
